@@ -1,7 +1,7 @@
 import random
 
 
-def get_input():
+def userinput():
     try:
         # convert input to integer
         number = int(input("Enter your number and hit Enter: "))
@@ -14,5 +14,5 @@ def get_input():
         except ValueError:
             # recall function again
             print("Please input a number")
-            get_input()
+            userinput()
 
