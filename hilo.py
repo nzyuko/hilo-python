@@ -13,10 +13,10 @@ def user_range():
             floor = float(input("Input the floor of your range(Minimum guessable number: )"))
             ceiling = float(input("Input the ceiling of your range(Maximum guessable number: )"))
             return [floor, ceiling]
-        except ValueError:
-            # recall function again
-            print("Please input a number")
-            user_range()
+    except ValueError:
+        # recall function again
+        print("Please input a number")
+        user_range()
 
 
 def userinput():
