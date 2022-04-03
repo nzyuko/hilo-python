@@ -6,16 +6,18 @@ def user_range():
         # calculate range for integer input
         floor = int(input("Input the floor of your range(Minimum guessable number: )"))
         ceiling = int(input("Input the ceiling of your range(Maximum guessable number: )"))
-        return ceiling - floor
+        return [floor, ceiling]
     except ValueError:
         try:
-            # convert it to a float
-            number = float(input("Enter your number and hit Enter: "))
-            return number
+            # calculate range for integer input
+            floor = float(input("Input the floor of your range(Minimum guessable number: )"))
+            ceiling = float(input("Input the ceiling of your range(Maximum guessable number: )"))
+            return [floor, ceiling]
         except ValueError:
             # recall function again
             print("Please input a number")
-            userinput()
+            user_range()
+
 
 def userinput():
     try:
@@ -32,4 +34,5 @@ def userinput():
             print("Please input a number")
             userinput()
 
-def pick_random():
+
+print(user_range())
